@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SineAdz — Where strategy meets signal</title>
+<meta name="description" content="SineAdz is a digital marketing agency: social media, motion graphics, influencer marketing, web design and SEO.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{--red:#D90429;--red-text:#D90429;--bg:#FFFFFF;--fg:#2C2C2C;--muted:#6A6A6A;--line:#E6E6E6;--soft:#F7F7F7;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root{color-scheme:light}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:Inter,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+.serif{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif}
+header{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-name{font-size:30px;font-weight:600;letter-spacing:-.5px;line-height:1}
+.brand-name b{color:var(--red-text);font-weight:600}
+nav ul{display:flex;gap:34px;list-style:none;margin:0;padding:0;font-size:14px;letter-spacing:.04em}
+nav a:hover{color:var(--red-text)}
+.btn{display:inline-block;background:var(--red);color:#fff;padding:14px 30px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border:0;cursor:pointer;font-family:inherit;transition:background .2s}
+.btn:hover{background:#B30320}
+.btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--fg)}
+.btn.ghost:hover{background:var(--fg);color:var(--bg)}
+.hero{padding:96px 0 0;border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding-bottom:96px}
+.art{justify-self:end;width:100%;max-width:400px}
+.art svg{display:block;width:100%;height:auto}
+.strip{background:var(--fg);color:#fff}
+.strip .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px 28px;flex-wrap:wrap;padding-top:22px;padding-bottom:22px;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+.strip i{width:5px;height:5px;background:var(--red);display:block;transform:rotate(45deg)}
+.lock{display:flex;flex-direction:column;gap:6px}
+.tag{font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);line-height:1;white-space:nowrap}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--red-text);display:flex;align-items:center;gap:14px}
+.eyebrow::before{content:"";width:40px;height:1px;background:var(--red)}
+h1{font-size:clamp(48px,7.4vw,98px);line-height:.98;font-weight:500;letter-spacing:-2px;margin:28px 0 30px;max-width:11ch}
+h1 em{font-style:italic;color:var(--red-text)}
+.lead{font-size:19px;color:var(--muted);max-width:540px;margin:0 0 26px}
+.ticks{list-style:none;padding:0;margin:0 0 40px;display:grid;gap:10px;font-size:15px;font-weight:500}
+.ticks li{display:flex;align-items:center;gap:14px}
+.ticks li::before{content:"";width:7px;height:7px;background:var(--red);transform:rotate(45deg);flex:none}
+.stats{display:flex;gap:48px;margin-top:52px;padding-top:28px;border-top:1px solid var(--line);max-width:540px}
+.stats b{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:46px;font-weight:500;line-height:1;color:var(--red-text);margin-bottom:8px}
+.stats span{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.cta{display:flex;gap:16px;flex-wrap:wrap}
+section{padding:110px 0;border-bottom:1px solid var(--line)}
+.head{display:grid;grid-template-columns:1fr 2fr;gap:40px;margin-bottom:64px}
+h2{font-size:clamp(38px,5vw,60px);line-height:1.05;font-weight:500;letter-spacing:-1px;margin:14px 0 0}
+.head p{color:var(--muted);font-size:18px;margin:0;align-self:end;max-width:560px}
+.svc{display:grid;grid-template-columns:80px 1.1fr 1.4fr;gap:32px;padding:38px 0;border-top:1px solid var(--line);align-items:start;transition:padding .25s}
+.svc:last-child{border-bottom:1px solid var(--line)}
+.svc:hover{padding-left:14px}
+.svc:hover h3{color:var(--red-text)}
+.num{font-size:15px;color:var(--red-text);font-weight:600;letter-spacing:.1em;padding-top:12px}
+.svc h3{font-size:clamp(28px,3.2vw,40px);font-weight:500;margin:0;line-height:1.1;transition:color .2s}
+.svc p{margin:0 0 14px;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{font-size:12px;letter-spacing:.06em;border:1px solid var(--line);padding:4px 12px;color:var(--fg)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
+.step{padding:40px 36px 10px 0}
+.step+.step{padding-left:36px;border-left:1px solid var(--line)}
+.step .n{font-size:64px;color:var(--red-text);line-height:1;font-weight:500}
+.step h3{font-size:26px;margin:14px 0 8px;font-weight:500}
+.step p{color:var(--muted);margin:0}
+.dark{background:#2C2C2C;color:#fff}
+.dark .head p,.dark .step p{color:#C9C9C9}
+.dark .steps,.dark .step,.dark .step+.step{border-color:#4A4A4A}
+.dark .eyebrow{color:#FF4D63}
+.dark .eyebrow::before{background:#FF4D63}
+.dark .step .n{color:#FF4D63}
+.contact{background:var(--bg);color:var(--fg);border-bottom:0}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px}
+.contact h2{color:var(--fg)}
+.contact p{color:var(--muted);font-size:18px;max-width:420px}
+.info{margin-top:44px;display:grid;gap:22px}
+.info small{display:block;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.info a,.info span{font-size:20px;color:var(--fg)}
+.info a:hover{color:var(--red-text)}
+.field{display:block;margin-bottom:26px}
+.field label{display:block;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.field input,.field textarea,.field select{width:100%;background:transparent;border:0;border-bottom:1px solid #BDBDBD;color:var(--fg);font:inherit;font-size:17px;padding:8px 0 10px;border-radius:0;outline:none}
+.field select option{color:#2C2C2C}
+.field input:focus,.field textarea:focus,.field select:focus{border-bottom-color:var(--red)}
+.field textarea{resize:vertical;min-height:90px}
+.note{font-size:14px;color:var(--muted);margin-top:14px}
+footer{background:#1C1C1C;color:#BDBDBD;padding:34px 0 calc(34px + env(safe-area-inset-bottom,0px));font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+footer .brand-name{color:#fff;font-size:24px}
+footer .brand-name b{color:#FF4D63}
+footer .tag{color:#BDBDBD}
+@media (max-width:860px){
+nav ul{display:none}
+.hero{padding:64px 0 0}section{padding:76px 0}
+.hero-grid{grid-template-columns:1fr;padding-bottom:56px}
+.art{justify-self:start;max-width:240px}
+.strip i{display:none}
+.stats{gap:26px;margin-top:40px}
+.stats b{font-size:36px}
+.stats span{font-size:10px;letter-spacing:.14em}
+.strip .wrap{justify-content:flex-start;gap:10px 22px;font-size:11px}
+.head,.contact .wrap{grid-template-columns:1fr;gap:28px}
+.svc{grid-template-columns:44px 1fr;gap:6px 14px}
+.svc>div:last-child{grid-column:2}
+.steps{grid-template-columns:1fr}
+.step,.step+.step{padding:30px 0;border-left:0;border-top:1px solid var(--line)}
+.step:first-child{border-top:0}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap nav">
+<a class="brand" href="#top" aria-label="SineAdz home">
+<svg width="38" height="38" viewBox="0 0 40 40" aria-hidden="true"><rect x="2" y="2" width="36" height="36" fill="none" stroke="#D90429" stroke-width="3"/><path d="M13 22l4.5-8 4.5 8zM21 15l4.5-8 4.5 8zM21 30l4.5-8 4.5 8zM9 32l4.5-8 4.5 8z" fill="#D90429" transform="translate(-1 1) scale(.92)"/></svg>
+<span class="lock"><span class="brand-name serif">Sine<b>Adz</b></span><span class="tag">Where strategy meets signal.</span></span>
+</a>
+<nav aria-label="Primary"><ul>
+<li><a href="#services">Services</a></li>
+<li><a href="#approach">Approach</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul></nav>
+<a class="btn" href="#contact">Let’s talk</a>
+</div>
+</header>
+
+<main id="top">
+<div class="hero"><div class="wrap hero-grid"><div class="hero-text">
+<div class="eyebrow">Digital marketing agency</div>
+<h1 class="serif">Where strategy meets <em>signal.</em></h1>
+<p class="lead">We build brands people notice and remember, through social, motion, influence, design and search, all working as one.</p>
+<ul class="ticks"><li>Strategy-first approach to every campaign</li><li>Creative crafted to perform, not just to look good</li><li>Clear, transparent reporting you can act on</li></ul>
+<div class="cta"><a class="btn" href="#contact">Start a project</a><a class="btn ghost" href="#services">Our services</a></div>
+<div class="stats"><div><b>5</b><span>Core services</span></div><div><b>1</b><span>Integrated team</span></div><div><b>360°</b><span>Digital growth</span></div></div>
+</div>
+<div class="art"><svg viewBox="0 0 400 400" role="img" aria-label="SineAdz mark"><rect x="44" y="44" width="340" height="340" fill="none" stroke="#2C2C2C" stroke-width="3"/><rect x="16" y="16" width="340" height="340" fill="none" stroke="#D90429" stroke-width="7"/><g fill="#D90429" transform="translate(12 6)"><path d="M118 108l50 90h-100z"/><path d="M240 82l50 90h-100z"/><path d="M118 224l50 90h-100z"/><path d="M240 196l50 90h-100z"/></g></svg></div>
+</div>
+<div class="strip"><div class="wrap"><span>Social Media</span><i></i><span>Motion Graphics</span><i></i><span>Influencer Marketing</span><i></i><span>Web Design</span><i></i><span>SEO</span></div></div>
+</div>
+
+<section id="services"><div class="wrap">
+<div class="head">
+<div><div class="eyebrow">What we do</div><h2 class="serif">Five disciplines, one clear voice.</h2></div>
+<p>Every service is built to work alone or together, so your brand stays consistent from first impression to final conversion.</p>
+</div>
+<div>
+<article class="svc"><div class="num">01</div><h3 class="serif">Digital Marketing &amp; Social Media</h3><div><p>Strategy, content and paid campaigns that grow your audience and turn attention into enquiries.</p><div class="tags"><span>Strategy</span><span>Content</span><span>Paid media</span><span>Community</span></div></div></article>
+<article class="svc"><div class="num">02</div><h3 class="serif">Motion Graphics</h3><div><p>Story-led video that holds attention, from short scroll-stoppers to full brand films.</p><div class="tags"><span>Reels</span><span>Explainer videos</span><span>Brand films</span></div></div></article>
+<article class="svc"><div class="num">03</div><h3 class="serif">Influencer Marketing</h3><div><p>Creator partnerships matched to your audience, with clear briefs and honest reporting.</p><div class="tags"><span>Creator sourcing</span><span>Campaigns</span><span>Reporting</span></div></div></article>
+<article class="svc"><div class="num">04</div><h3 class="serif">Web Design &amp; Development</h3><div><p>Fast, refined websites that look the part and are built to convert visitors into clients.</p><div class="tags"><span>UI design</span><span>Development</span><span>Performance</span></div></div></article>
+<article class="svc"><div class="num">05</div><h3 class="serif">SEO</h3><div><p>Technical and content optimisation that earns lasting visibility in search.</p><div class="tags"><span>Technical SEO</span><span>Content</span><span>Local search</span></div></div></article>
+</div>
+</div></section>
+
+<section id="approach" class="dark"><div class="wrap">
+<div class="head">
+<div><div class="eyebrow">Our approach</div><h2 class="serif">Simple, deliberate, measurable.</h2></div>
+<p>A clear process keeps work focused and keeps you informed at every step.</p>
+</div>
+<div class="steps">
+<div class="step"><div class="n serif">1</div><h3 class="serif">Understand</h3><p>We learn your brand, audience and goals before a single idea is drawn up.</p></div>
+<div class="step"><div class="n serif">2</div><h3 class="serif">Create</h3><p>Strategy and creative come together into campaigns, content and experiences.</p></div>
+<div class="step"><div class="n serif">3</div><h3 class="serif">Grow</h3><p>We track what matters, refine continuously and scale what works.</p></div>
+</div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+<div>
+<div class="eyebrow">Contact us</div>
+<h2 class="serif">Let’s build something remarkable.</h2>
+<p>Tell us about your brand and goals. We’ll respond with a thoughtful plan, not a template.</p>
+<div class="info">
+<div><small>Email</small><a href="mailto:sineadz.marketing@gmail.com">sineadz.marketing@gmail.com</a></div>
+<div><small>Phone</small><a href="tel:+916374539861">+91 63745 39861</a></div>
+<div><small>Studio</small><span>Chennai, India</span></div>
+</div>
+</div>
+<div id="cform">
+<div class="field"><label for="n">Name</label><input id="n" type="text" autocomplete="name"></div>
+<div class="field"><label for="e">Email</label><input id="e" type="email" autocomplete="email"></div>
+<div class="field"><label for="s">Interested in</label>
+<select id="s"><option>Digital Marketing &amp; Social Media</option><option>Motion Graphics</option><option>Influencer Marketing</option><option>Web Design &amp; Development</option><option>SEO</option><option>Not sure yet</option></select></div>
+<div class="field"><label for="m">Message</label><textarea id="m"></textarea></div>
+<button class="btn" id="send" type="button">Send message</button>
+<p class="note" id="note" role="status"></p>
+</div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+<span class="lock"><span class="brand-name serif">Sine<b>Adz</b></span><span class="tag">Where strategy meets signal.</span></span>
+<span>© 2026 SineAdz. All rights reserved.</span>
+</div></footer>
+
+<script>
+document.getElementById('send').addEventListener('click',function(){
+var n=document.getElementById('n').value.trim(),e=document.getElementById('e').value.trim(),
+s=document.getElementById('s').value,m=document.getElementById('m').value.trim(),
+note=document.getElementById('note');
+if(!n||!e||!m){note.textContent='Please fill in your name, email and message.';return}
+var body='Name: '+n+'\nEmail: '+e+'\nInterested in: '+s+'\n\n'+m;
+window.location.href='mailto:sineadz.marketing@gmail.com?subject='+encodeURIComponent('New enquiry from '+n)+'&body='+encodeURIComponent(body);
+note.textContent='Opening your email app to send this message.';
+});
+</script>
+</body>
+</html>
