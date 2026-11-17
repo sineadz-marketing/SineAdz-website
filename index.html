@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2">
+  <meta name="description" content="SineAdz is an independent digital marketing and creative agency. Strategy, design and digital execution for brands ready to move forward.">
+  <meta property="og:title" content="SineAdz — Where strategy meets signal">
+  <meta property="og:description" content="Independent thinking. Distinctive creative. Digital work with purpose.">
+  <title>SineAdz — Where strategy meets signal</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <meta property="og:image" content="https://sineadz-marketing.github.io/SineAdz-website/sineadz-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --paper:#f7f6f2;--white:#fff;--ink:#282a2b;--charcoal:#343638;
+      --red:#d9272e;--red-dark:#b91f26;--muted:#6e7070;--line:#deddd7;
+      --soft:#eeede8;--max:1160px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:88px}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",Arial,sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    button,input,select,textarea{font:inherit}
+    .container{width:min(var(--max),calc(100% - 56px));margin:auto}
+    .topline{height:5px;background:var(--red)}
+    header{position:sticky;top:0;z-index:30;background:rgba(247,246,242,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font:800 1.55rem "Manrope",sans-serif;letter-spacing:-.09em}
+    .brand-logo{display:inline-flex;align-items:center;line-height:0;flex:0 0 auto}
+    .brand-logo img{display:block;width:270px;max-width:100%;height:auto}
+    header .brand-logo img{mix-blend-mode:multiply}
+    .footer-logo{background:#fff;padding:5px 8px}
+    .footer-logo img{width:245px}
+    .brand i{font-style:normal;color:var(--red)}
+    .navlinks{display:flex;align-items:center;gap:31px;font-size:.88rem;font-weight:600;color:#505253}
+    .navlinks a:not(.navbutton):hover{color:var(--red)}
+    .navbutton{background:var(--red);color:white;padding:11px 18px;font-weight:700;transition:.2s}
+    .navbutton:hover{background:var(--red-dark)}
+    .menu{display:none;border:0;background:none;font-size:1.55rem;color:var(--ink)}
+    .kicker{font-size:.72rem;letter-spacing:.17em;text-transform:uppercase;font-weight:700;color:var(--red);display:flex;align-items:center;gap:10px}
+    .kicker:before{content:"";width:25px;height:2px;background:var(--red)}
+    h1,h2,h3{font-family:"Manrope",sans-serif;letter-spacing:-.055em;line-height:1.06;margin:0}
+    h1{font-size:clamp(3.3rem,7.5vw,7.1rem);font-weight:800;max-width:900px}
+    h2{font-size:clamp(2.35rem,5vw,4.45rem);font-weight:800}
+    h3{font-size:1.45rem;font-weight:750}
+    p{color:var(--muted);margin:0 0 1em}
+    .hero{padding:88px 0 62px}
+    .hero-layout{display:grid;grid-template-columns:1.12fr .88fr;gap:55px;align-items:end}
+    .hero h1{margin:22px 0 25px}
+    .hero h1 span{color:var(--red)}
+    .intro{font-size:1.08rem;max-width:530px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:29px}
+    .button{display:inline-flex;align-items:center;gap:22px;padding:14px 19px;background:var(--red);color:#fff;font-weight:700;font-size:.9rem;border:1px solid var(--red);transition:.2s}
+    .button:hover{background:var(--red-dark);border-color:var(--red-dark);transform:translateY(-2px)}
+    .button.outline{background:transparent;color:var(--ink);border-color:#aaa9a3}
+    .button.outline:hover{border-color:var(--red);color:var(--red);background:transparent}
+    .hero-side{border-left:1px solid var(--line);padding:12px 0 8px 29px}
+    .hero-side .index{font:800 5.8rem/.9 "Manrope";letter-spacing:-.1em;color:var(--red)}
+    .hero-side p{max-width:300px;margin:17px 0 0}
+    .hero-meta{border-top:1px solid var(--line);margin-top:75px;padding-top:18px;display:flex;justify-content:space-between;gap:20px;color:#777a79;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em}
+    .hero-meta strong{color:var(--ink);font-weight:700}
+    .feature{padding:20px 0 100px}
+    .feature-frame{min-height:420px;display:grid;grid-template-columns:1.05fr .95fr;background:var(--charcoal);color:white;overflow:hidden}
+    .feature-copy{padding:clamp(30px,5vw,65px);display:flex;flex-direction:column;justify-content:space-between}
+    .feature-copy .kicker{color:#ff777b}
+    .feature-copy .kicker:before{background:#ff777b}
+    .feature-copy h2{font-size:clamp(2.3rem,4.5vw,4.1rem);max-width:510px;margin:25px 0}
+    .feature-copy p{color:#c8c9c7;max-width:430px}
+    .feature-art{position:relative;min-height:360px;background:#d9272e;overflow:hidden;display:flex;align-items:center;justify-content:center}
+    .feature-art:before{content:"";position:absolute;width:390px;height:390px;border:1px solid rgba(255,255,255,.45);border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%)}
+    .feature-art:after{content:"";position:absolute;width:290px;height:290px;border:1px solid rgba(255,255,255,.45);border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%)}
+    .art-type{position:relative;z-index:1;color:white;font:800 clamp(2.5rem,6vw,5.4rem)/.85 "Manrope";letter-spacing:-.1em;text-align:center;transform:rotate(-8deg)}
+    .art-type small{display:block;font:700 .67rem "DM Sans";letter-spacing:.22em;margin-top:18px}
+    section.standard{padding:100px 0}
+    .section-head{display:grid;grid-template-columns:1fr .7fr;gap:50px;align-items:end;margin-bottom:48px}
+    .section-head p{max-width:430px;margin:0 0 5px}
+    .services{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line)}
+    .service{padding:28px 26px 31px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:55px 1fr 25px;gap:18px;min-height:195px}
+    .service:nth-child(odd){padding-right:32px}
+    .service:nth-child(even){padding-left:28px;border-left:1px solid var(--line)}
+    .service .no{font-size:.76rem;color:var(--red);font-weight:700;padding-top:5px}
+    .service p{font-size:.92rem;max-width:430px;margin:10px 0 0}
+    .service .arrow{font-size:1.2rem;color:var(--red);padding-top:2px}
+    .service:hover h3{color:var(--red)}
+    .dark-band{background:var(--charcoal);color:#fff;padding:92px 0}
+    .dark-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:start}
+    .dark-band .kicker{color:#ff777b}
+    .dark-band .kicker:before{background:#ff777b}
+    .dark-band h2{max-width:440px}
+    .dark-band p{color:#c7c9c7}
+    .dark-copy{font-size:1.06rem;max-width:650px}
+    .values{margin-top:32px;border-top:1px solid rgba(255,255,255,.2)}
+    .value{display:grid;grid-template-columns:45px 1fr;gap:18px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.2)}
+    .value b{color:#ff777b;font-size:.8rem}
+    .value strong{font-family:"Manrope";font-size:1.02rem}
+    .value p{margin:4px 0 0;font-size:.9rem}
+    .process{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .step{padding:26px 27px 28px 0;min-height:235px}
+    .step+.step{border-left:1px solid var(--line);padding-left:27px}
+    .step .stepno{font:800 2.3rem "Manrope";color:var(--red);letter-spacing:-.08em}
+    .step h3{margin:26px 0 10px}
+    .step p{font-size:.91rem;max-width:300px}
+    .work-intro{display:grid;grid-template-columns:1fr .7fr;gap:50px;align-items:end;margin-bottom:34px}
+    .work-note{font-size:.86rem}
+    .work-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .work-card{min-height:300px;background:#e8e5dd;position:relative;overflow:hidden;display:flex;align-items:end;padding:25px}
+    .work-card:nth-child(2){background:#d7d5cf}
+    .work-card:nth-child(3){background:#c9c9c5}
+    .work-card:nth-child(4){background:#e9d8d6}
+    .work-art{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+    .work-card:nth-child(1) .work-art{background:linear-gradient(135deg,#25292a 0 48%,#d9272e 48% 100%)}
+    .work-card:nth-child(2) .work-art{background:linear-gradient(125deg,#ecebe6,#b8b8b2)}
+    .work-card:nth-child(3) .work-art{background:linear-gradient(135deg,#d9272e,#8d171d)}
+    .work-card:nth-child(4) .work-art{background:linear-gradient(135deg,#343638,#5a5c5d)}
+    .work-art span{font:800 clamp(2rem,4vw,4rem)/.9 "Manrope";letter-spacing:-.09em;text-align:center;color:white;position:relative;z-index:1}
+    .work-art span em{font-style:normal;color:#fff}
+    .work-label{position:relative;z-index:2;background:var(--paper);padding:12px 15px;max-width:90%}
+    .work-label small{display:block;color:var(--red);font-size:.67rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+    .work-label strong{font:700 1rem "Manrope"}
+    .disclaimer{font-size:.78rem;margin-top:17px}
+    .faq{border-top:1px solid var(--line)}
+    details{border-bottom:1px solid var(--line);padding:21px 0}
+    summary{cursor:pointer;list-style:none;font:700 1.06rem "Manrope";display:flex;justify-content:space-between;gap:20px}
+    summary::-webkit-details-marker{display:none}
+    summary:after{content:"+";color:var(--red);font-size:1.3rem}
+    details[open] summary:after{content:"−"}
+    details p{max-width:750px;margin:14px 0 0;font-size:.94rem}
+    .contact{background:#eeede8}
+    .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px}
+    .contact-grid h2{margin:19px 0}
+    .contact-info{margin-top:32px;display:grid;gap:18px}
+    .contact-item small{display:block;color:#888;font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700}
+    .contact-item a,.contact-item span{font-weight:600}
+    .contact-item a:hover{color:var(--red)}
+    form{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+    .field{display:grid;gap:7px}
+    .full{grid-column:1/-1}
+    label{font-size:.82rem;font-weight:600}
+    input,select,textarea{border:1px solid #d2d0c8;background:#f9f8f4;padding:13px 14px;color:var(--ink);border-radius:0;outline:none;width:100%}
+    input:focus,select:focus,textarea:focus{border-color:var(--red)}
+    textarea{min-height:125px;resize:vertical}
+    form .button{cursor:pointer;justify-self:start}
+    .form-note,.status{font-size:.76rem;margin:0}
+    .status{color:var(--red);min-height:20px}
+    footer{background:var(--charcoal);color:#fff;padding:28px 0}
+    .footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px}
+    footer p{color:#c4c6c3;font-size:.78rem;margin:0}
+    .footlinks{display:flex;gap:22px;font-size:.82rem;color:#ddd}
+    .footlinks a:hover{color:#ff777b}
+    .reveal{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
+    .reveal.show{opacity:1;transform:none}
+    .whatsapp{position:fixed;right:20px;bottom:20px;z-index:15;width:50px;height:50px;background:#25a95a;color:#fff;display:grid;place-items:center;border-radius:50%;font-size:1.3rem;box-shadow:0 5px 20px #0002}
+    @media(max-width:820px){
+      .hero-layout,.section-head,.dark-grid,.work-intro,.contact-grid{grid-template-columns:1fr;gap:28px}
+      .hero-side{border-left:0;border-top:1px solid var(--line);padding:22px 0 0;display:flex;align-items:center;gap:20px}
+      .hero-side .index{font-size:4rem}
+      .hero-meta{margin-top:45px}
+      .feature-frame{grid-template-columns:1fr}
+      .feature-art{min-height:260px}
+      .dark-grid{gap:35px}
+      .navlinks{display:none;position:fixed;inset:83px 0 0;background:var(--paper);padding:28px;flex-direction:column;align-items:flex-start}
+      .navlinks.open{display:flex}
+      .menu{display:block}
+    }
+    @media(max-width:600px){
+      .container{width:calc(100% - 36px)}
+      .nav{height:70px}
+      .brand-logo img{width:225px}
+      .footer-logo img{width:215px}
+      .navlinks{inset:75px 0 0}
+      .hero{padding:66px 0 48px}
+      .hero h1{font-size:clamp(3.1rem,16vw,5rem)}
+      .hero-meta{flex-direction:column;gap:8px}
+      section.standard{padding:74px 0}
+      .feature{padding-bottom:65px}
+      .feature-frame{min-height:unset}
+      .feature-art{min-height:220px}
+      .services{grid-template-columns:1fr}
+      .service,.service:nth-child(odd),.service:nth-child(even){padding:22px 0;grid-template-columns:38px 1fr 20px;border-left:0;min-height:unset}
+      .process{grid-template-columns:1fr}
+      .step,.step+.step{border-left:0;border-bottom:1px solid var(--line);padding:22px 0;min-height:unset}
+      .step:last-child{border-bottom:0}
+      .step h3{margin:12px 0 8px}
+      .work-grid{grid-template-columns:1fr}
+      .work-card{min-height:250px}
+      form{grid-template-columns:1fr}
+      .full{grid-column:1}
+      .footer-row{align-items:flex-start;flex-direction:column}
+      .footlinks{flex-wrap:wrap}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <div class="topline"></div>
+  <header>
+    <div class="container nav">
+      <a class="brand-logo" href="#home" aria-label="SineAdz home"><img src="sineadz-logo.png" alt="SineAdz — Where strategy meets signal" width="362" height="61"></a>
+      <nav class="navlinks" id="navlinks" aria-label="Main navigation">
+        <a href="#services">Services</a><a href="#about">About</a><a href="#work">Creative work</a><a href="#approach">Approach</a>
+        <a class="navbutton" href="#contact">Start a conversation&nbsp; ↗</a>
+      </nav>
+      <button class="menu" id="menu" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-layout">
+          <div>
+            <div class="kicker">Independent creative & digital agency</div>
+            <h1>Make your brand<br><span>mean more.</span></h1>
+            <p class="intro">SineAdz brings strategy, creativity and digital thinking together to help businesses build a clearer presence and connect with the people who matter.</p>
+            <div class="actions">
+              <a class="button" href="#contact">Talk about your project <span>↗</span></a>
+              <a class="button outline" href="#services">What we do <span>↓</span></a>
+            </div>
+          </div>
+          <aside class="hero-side">
+            <div class="index">01<span style="color:var(--ink)">.</span></div>
+            <p>Good work starts with good questions. We look for the idea behind the brief, then make it work in the real world.</p>
+          </aside>
+        </div>
+        <div class="hero-meta"><span><strong>Strategy</strong> / direction</span><span><strong>Creative</strong> / execution</span><span><strong>Digital</strong> / growth</span><span>Where strategy meets signal.</span></div>
+      </div>
+    </section>
+
+    <section class="feature">
+      <div class="container">
+        <div class="feature-frame">
+          <div class="feature-copy">
+            <div><div class="kicker">The SineAdz perspective</div><h2>Less noise.<br>More <span style="color:#ff777b">meaning.</span></h2><p>We don't believe in marketing for the sake of being seen. We believe in clear thinking, thoughtful creative and communication that earns attention.</p></div>
+            <a href="#about" style="color:#fff;font-weight:700">Get to know SineAdz&nbsp; ↗</a>
+          </div>
+          <div class="feature-art" aria-label="Abstract red and white SineAdz graphic"><div class="art-type">IDEAS<br>INTO<br>IMPACT<small>WHERE STRATEGY MEETS SIGNAL</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="standard" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><div class="kicker">What we bring to the table</div><h2>Our services,<br>working together.</h2></div>
+          <p>From the first impression to the next conversion, we help shape the parts of your digital presence that move your business forward.</p>
+        </div>
+        <div class="services">
+          <a class="service reveal" href="digital-marketing.html"><span class="no">01</span><div><h3>Digital Marketing & Social Media</h3><p>Build a consistent presence with channel strategy, content planning, campaign creative and ongoing optimisation.</p></div><span class="arrow">↗</span></a>
+          <a class="service reveal" href="motion-graphics.html"><span class="no">02</span><div><h3>Motion Graphics</h3><p>Bring ideas to life through purposeful animation, short-form video, explainers and visual storytelling.</p></div><span class="arrow">↗</span></a>
+          <a class="service reveal" href="influencer-marketing.html"><span class="no">03</span><div><h3>Influencer Marketing</h3><p>Plan creator collaborations around audience relevance, brand fit and a clear campaign objective.</p></div><span class="arrow">↗</span></a>
+          <a class="service reveal" href="web-design.html"><span class="no">04</span><div><h3>Web Design & Development</h3><p>Design and build useful, responsive digital experiences that make your brand easier to understand and engage with.</p></div><span class="arrow">↗</span></a>
+          <a class="service reveal" href="seo.html"><span class="no">05</span><div><h3>Search Engine Optimization</h3><p>Improve how your business is discovered with sound technical foundations, useful content and considered search strategy.</p></div><span class="arrow">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-band" id="about">
+      <div class="container dark-grid">
+        <div class="reveal"><div class="kicker">Who we are</div><h2>Independent thinking. <span style="color:#ff777b">Intentional work.</span></h2></div>
+        <div class="dark-copy reveal">
+          <p>SineAdz is an independent digital marketing and creative agency with a straightforward approach: understand the business, find the right message and create work that has a reason to exist.</p>
+          <p>We bring different digital disciplines under one roof, helping brands keep their communication connected—from social content and motion to websites and search.</p>
+          <div class="values">
+            <div class="value"><b>01 /</b><div><strong>Curiosity first</strong><p>We ask, listen and understand before jumping to solutions.</p></div></div>
+            <div class="value"><b>02 /</b><div><strong>Craft matters</strong><p>We care about the details, from the first line of copy to the final pixel.</p></div></div>
+            <div class="value"><b>03 /</b><div><strong>Purpose over noise</strong><p>We connect creative decisions to the job they need to do.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="standard" id="approach">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><div class="kicker">A clear way of working</div><h2>From first brief<br>to final detail.</h2></div>
+          <p>No unnecessary layers. Just a considered process that keeps the work focused and the communication straightforward.</p>
+        </div>
+        <div class="process">
+          <article class="step reveal"><div class="stepno">01</div><h3>Listen & understand</h3><p>We get to know your business, audience, challenges and what success should look like.</p></article>
+          <article class="step reveal"><div class="stepno">02</div><h3>Plan & create</h3><p>We agree on a direction, define the deliverables and develop the work with care.</p></article>
+          <article class="step reveal"><div class="stepno">03</div><h3>Deliver & improve</h3><p>We share the work, learn from its performance and identify sensible next steps.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="standard" id="work" style="padding-top:25px">
+      <div class="container">
+        <div class="work-intro reveal">
+          <div><div class="kicker">Creative direction</div><h2>Work with a point<br>of view.</h2></div>
+          <p class="work-note">A selection of visual directions to show the kind of creative territory SineAdz can explore. Replace these concept panels with your own original work as your portfolio develops.</p>
+        </div>
+        <div class="work-grid">
+          <article class="work-card reveal"><div class="work-art"><span>MAKE<br><em>NOISE.</em></span></div><div class="work-label"><small>Concept direction / 01</small><strong>Campaign & visual identity</strong></div></article>
+          <article class="work-card reveal"><div class="work-art"><span>FORM<br>FOLLOWS<br>FEELING.</span></div><div class="work-label"><small>Concept direction / 02</small><strong>Digital experience</strong></div></article>
+          <article class="work-card reveal"><div class="work-art"><span>STOP.<br>LOOK.<br>CONNECT.</span></div><div class="work-label"><small>Concept direction / 03</small><strong>Social-first creative</strong></div></article>
+          <article class="work-card reveal"><div class="work-art"><span>IDEAS<br>MOVE<br>PEOPLE.</span></div><div class="work-label"><small>Concept direction / 04</small><strong>Motion & storytelling</strong></div></article>
+        </div>
+        <p class="disclaimer">These are illustrative design concepts, not claimed client projects or campaign results.</p>
+      </div>
+    </section>
+
+    <section class="standard" style="background:#fff">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><div class="kicker">A few useful details</div><h2>Before we<br>get started.</h2></div>
+          <p>Good partnerships begin with shared expectations. Here are answers to a few common first questions.</p>
+        </div>
+        <div class="faq reveal">
+          <details><summary>Can I work with SineAdz on one service?</summary><p>Yes. You can start with a single service or combine multiple disciplines when a connected approach is useful.</p></details>
+          <details><summary>How do you decide what my business needs?</summary><p>We begin with a conversation about your goals, audience, current activity and constraints. From there, we can recommend a suitable scope.</p></details>
+          <details><summary>Do you offer custom pricing?</summary><p>Yes. Pricing depends on the scope, deliverables and timeline. We discuss the requirements and provide a proposal before work begins.</p></details>
+          <details><summary>How do I begin?</summary><p>Send us a short note using the enquiry form. Share what your business does and what you'd like to achieve. We'll take it from there.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="standard contact" id="contact">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <div class="kicker">Start a conversation</div><h2>Have something<br>in mind?</h2>
+          <p>Tell us a little about your business and what you'd like to make happen. We'll get back to you to discuss the next step.</p>
+          <div class="contact-info">
+            <div class="contact-item"><small>Email</small><a href="mailto:sineadz.marketing@gmail.com">sineadz.marketing@gmail.com</a></div>
+            <div class="contact-item"><small>Phone</small><a href="tel:+916374539861">+91 63745 39861</a></div>
+            <div class="contact-item"><small>Based in</small><span>Chennai, India</span></div>
+          </div>
+        </div>
+        <form id="contactForm" class="reveal" action="https://formspree.io/f/maeoqkrj" method="POST">
+          <input type="hidden" name="_subject" value="New SineAdz website enquiry">
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;height:0;opacity:0">
+          <div class="field"><label for="name">Your name</label><input id="name" name="name" required autocomplete="name" placeholder="Name"></div>
+          <div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" required autocomplete="email" placeholder="you@business.com"></div>
+          <div class="field full"><label for="service">What are you looking for?</label><select id="service" name="service" required><option value="">Choose a service</option><option>Digital Marketing & Social Media</option><option>Motion Graphics</option><option>Influencer Marketing</option><option>Web Design & Development</option><option>SEO</option><option>Multiple services / Not sure yet</option></select></div>
+          <div class="field full"><label for="message">A little about your project</label><textarea id="message" name="message" required placeholder="What does your business do, and what would you like help with?"></textarea></div>
+          <div class="field full"><button class="button" type="submit">Send an enquiry&nbsp; ↗</button></div>
+          <p class="form-note full">Your enquiry will be sent securely through our contact form provider. We’ll get back to you as soon as possible.</p>
+          <p class="status full" id="status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <a class="brand-logo footer-logo" href="#home" aria-label="SineAdz home"><img src="sineadz-logo.png" alt="SineAdz — Where strategy meets signal"></a>
+      <p>© <span id="year"></span> SineAdz. Where strategy meets signal.</p>
+      <div class="footlinks"><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a><a href="mailto:sineadz.marketing@gmail.com">Email</a></div>
+    </div>
+  </footer>
+  <a class="whatsapp" href="https://wa.me/916374539861?text=Hi%20SineAdz%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" aria-label="Contact SineAdz on WhatsApp">✆</a>
+
+  <script>
+    const menu=document.getElementById('menu'),links=document.getElementById('navlinks');
+    menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰';});
+    links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰';}));
+    document.getElementById('year').textContent=new Date().getFullYear();
+    const requestedService=new URLSearchParams(window.location.search).get('service');
+    if(requestedService){const serviceSelect=document.getElementById('service');if(serviceSelect){for(const option of serviceSelect.options){if(option.text.toLowerCase()===requestedService.toLowerCase()){serviceSelect.value=option.value;break;}}}}
+
+
+    const form=document.getElementById('contactForm'),statusEl=document.getElementById('status');
+    form.addEventListener('submit',async e=>{
+      e.preventDefault();
+      const btn=form.querySelector('button[type=submit]');
+      btn.disabled=true;statusEl.style.color='';statusEl.textContent='Sending…';
+      try{
+        const r=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
+        if(r.ok){form.reset();statusEl.style.color='#2f7d4f';statusEl.textContent='Thank you — your enquiry has been sent. We will get back to you soon.';}
+        else{throw new Error('failed');}
+      }catch(err){
+        statusEl.style.color='';statusEl.textContent='Sorry, something went wrong. Please email us at sineadz.marketing@gmail.com.';
+      }
+      btn.disabled=false;
+    });
+
+    const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');observer.unobserve(e.target);}}),{threshold:.1});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  </script>
+</body>
+</html>
